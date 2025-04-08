@@ -4,8 +4,8 @@ import random
 import matplotlib.pyplot as plt
 import pandas as pd
 
-x_values_tr_deg = np.array(random.sample(range(1, 361), 70))
-x_values_gt_deg = np.array(random.sample(range(1, 361), 30))
+x_values_tr_deg = np.random.uniform(1, 361, 700)
+x_values_gt_deg = np.random.uniform(1, 361, 300)
 
 x_values_tr_rad = np.radians(x_values_tr_deg)
 x_values_gt_rad = np.radians(x_values_gt_deg)
@@ -13,8 +13,8 @@ x_values_gt_rad = np.radians(x_values_gt_deg)
 y_values_tr = np.sin(x_values_tr_rad)
 y_values_gt = np.sin(x_values_gt_rad)
 
-y_values_tr_error = y_values_tr  + np.random.uniform(-0.3, 0.3, 70)
-y_values_gt_error = y_values_gt  + np.random.uniform(-0.3, 0.3, 30)
+y_values_tr_error = y_values_tr  + np.random.uniform(-0.3, 0.3, 700)
+y_values_gt_error = y_values_gt  + np.random.uniform(-0.3, 0.3, 300)
 
 plt.scatter(x_values_tr_deg, y_values_tr_error, c = "pink")
 plt.scatter(x_values_gt_deg, y_values_gt_error, c = "purple")
