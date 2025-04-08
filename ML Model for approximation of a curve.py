@@ -49,7 +49,7 @@ def Grad_descent(data):
             sum_derivative += dLdn(parameters[0], parameters[1], parameters[2], parameters[3], x, true_y)
         mean_derivative = sum_derivative / len(data)
         update_parameters[i] = learning_rate * mean_derivative
-    return update_parameter
+    return update_parameters
 
 
 for i in range(0,1000):
